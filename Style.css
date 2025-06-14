@@ -1,0 +1,217 @@
+/* RESET E VARIÁVEIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --color-brown-transparent: #cd82505d;
+    --color-brown: #CD8150;
+    --color-white: #FFFFFF;
+    --color-black: #111111;
+}
+
+/* HEADER */
+header {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 15px 10px;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-bar {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav-bar li a:hover,
+.nav-bar li a.active {
+    color: var(--color-brown);
+    border-bottom: 2px solid var(--color-brown);
+}
+
+.button-cls button {
+    background-color: var(--color-brown);
+    border: none;
+    color: var(--color-white);
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-cls button:hover {
+    background-color: #a15f38;
+}
+
+/* BACKGROUND HERO */
+.background {
+    background: url(img/backgrond.jpg) center/cover no-repeat;
+    height: 400px;
+    position: relative;
+}
+
+.background-overlay {
+    background-color: var(--color-brown-transparent);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    color: var(--color-white);
+    font-size: 30px;
+    text-align: center;
+    animation: slidein 1s ease forwards;
+}
+
+/* CONTEUDO */
+.conteudo {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.conteudo h2 {
+    margin-bottom: 10px;
+    color: var(--color-black);
+}
+
+.conteudo p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* TREND STYLE */
+#trend-style {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.cortes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.corte {
+    width: 250px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.corte:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.corte1 { background-image: url(img/degrade-com-risco.jpg); }
+.corte2 { background-image: url(img/corte-de-cabelo-masculino-38.jpg); }
+.corte3 { background-image: url(img/Fade-Moicano-Moderno-cortes-cabelo-curto-masculino.webp); }
+
+/* FORMULÁRIO */
+#formulario {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#formulario h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--color-black);
+}
+
+#formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formulario input,
+#formulario select,
+#formulario button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#formulario button {
+    background-color: var(--color-brown);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+}
+
+#formulario button:hover {
+    background-color: #a15f38;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+/* ANIMAÇÕES */
+@keyframes slidein {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .container-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .cortes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .corte {
+        width: 80%;
+        height: 300px;
+    }
+
+    .text {
+        font-size: 22px;
+    }
+}

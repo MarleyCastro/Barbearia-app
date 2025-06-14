@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia - Estilo e Elegância</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div id="logo">
+                <img src="img/logo.png" alt="Logo Barbearia" width="120">
+            </div>
+            <nav>
+                <ul class="nav-bar">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Cortes</a></li>
+                    <li><a href="#trend-style">Estilo</a></li>
+                    <li><a href="#formulario">Agendar</a></li>
+                </ul>
+            </nav>
+            <div class="button-cls">
+                <button>E-book Grátis</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="background">
+        <div class="background-overlay">
+            <h1 class="text">TEMOS CORTES VARIADOS</h1>
+        </div>
+    </section>
+
+    <main>
+        <section class="conteudo">
+            <h2>Conheça nosso trabalho</h2>
+            <p>Atendemos com qualidade e os cortes mais estilosos do momento. Venha transformar seu visual!</p>
+        </section>
+
+        <section id="trend-style">
+            <h2>Trending Style</h2>
+            <div class="cortes">
+                <div class="corte corte1"></div>
+                <div class="corte corte2"></div>
+                <div class="corte corte3"></div>
+            </div>
+        </section>
+
+        <section id="formulario">
+            <h2>Agende seu horário</h2>
+            <form>
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="tel" name="telefone" placeholder="Telefone (WhatsApp)" required>
+                <select name="tipo-corte" required>
+                    <option value="">Tipo de Corte</option>
+                    <option>Degradê</option>
+                    <option>Moicano</option>
+                    <option>Navalhado</option>
+                    <option>Outro</option>
+                </select>
+                <input type="date" name="data" required>
+                <input type="time" name="hora" required>
+                <button type="submit">Agendar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Barbearia Estilo - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
